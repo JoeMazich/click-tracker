@@ -28,7 +28,7 @@ const Button = ({ id, className, onClick, children, ...props }: ButtonProps) => 
       }}
       {...props}
     >
-      <div>{children}</div>
+      <div className="children">{children}</div>
       <div className="sweep" />
     </button>
   );

@@ -12,11 +12,11 @@ button > div {
   transition: transform 300ms ease;
 }
 
-button:hover > div {
+button:hover > .children {
   transform: scale(1.2);
 }
 
-button:active > div {
+button:active > .children {
   transition: transform 100ms ease;
   transform: scale(0.9);
 }
