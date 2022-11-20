@@ -1,22 +1,15 @@
 import "./styles/App.css";
 
-import React, { useEffect } from "react";
-import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
+import Tracker, { TrackerType } from "./components/Tracker";
 
 import Button from "./components/Button";
-import db from "./constants/firebase";
+import React from "react";
 
 function App() {
-  useEffect(() => {
-    const q = query(collection(db, "clickTracker/buttons/button-1"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      console.log(querySnapshot.size);
-    });
-  }, []);
-
   return (
     <div className="App">
-      <Button id="button-1">Hello</Button>
+      {/* <Button id="button-1">Hello</Button> */}
+      <Tracker trackId="button-1" trackerType={TrackerType.BUTTON} />
     </div>
   );
 }
