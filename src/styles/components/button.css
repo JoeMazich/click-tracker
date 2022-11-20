@@ -1,28 +1,38 @@
-.button {
-  background-color: black;
-  border-radius: 1000px;
-  color: white;
+button {
+  border: 0px;
   font-size: 40px;
   padding: 20px 30px;
-  transition: transform 300ms ease-in-out;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-.button:hover {
-  transform: scale(1.15);
+button > div {
+  color: black;
+  transition: transform 300ms ease;
 }
 
-.button:active {
+button:hover > div {
+  transform: scale(1.2);
+}
+
+button:active > div {
+  transition: transform 100ms ease;
   transform: scale(0.9);
 }
 
-.button:before {
+button > .sweep {
   height: 100%;
-  width: 100%;
+  width: 200%;
   position: absolute;
-  left: 0px;
   top: 0px;
-  transform-origin: 0% 100%;
+  left: 0px;
+  background-color: white;
+  mix-blend-mode: difference;
+  transform-origin: 0% 100.1%;
   transition: transform 300ms ease;
-  overflow: hidden;
-  filter: invert(100%);
+}
+
+button:hover > .sweep {
+  transform: rotate(-90deg);
 }

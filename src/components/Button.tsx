@@ -21,14 +21,15 @@ const Button = ({ id, className, onClick, children, ...props }: ButtonProps) => 
 
   return (
     <button
-      className={classNames(className, "button")}
+      className={classNames(className)}
       onClick={() => {
         trackButtonClick();
         if (onClick) onClick();
       }}
       {...props}
     >
-      {children}
+      <div>{children}</div>
+      <div className="sweep" />
     </button>
   );
 };
