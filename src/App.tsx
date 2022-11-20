@@ -8,7 +8,7 @@ import React from "react";
 function App() {
   return (
     <div className="App">
-      {/* <Button id="button-1">Hello</Button> */}
+      <Button id="button-1">Hello</Button>
       <Tracker trackId="button-1" trackerType={TrackerType.BUTTON} />
     </div>
   );

@@ -10,6 +10,8 @@ interface ButtonProps {
   className?: string;
   onClick?: any;
   children?: any;
+
+  [props: string]: any;
 }
 
 const Button = ({ id, className, onClick, children, ...props }: ButtonProps) => {
