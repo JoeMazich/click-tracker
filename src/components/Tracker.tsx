@@ -38,7 +38,7 @@ const Tracker = ({ trackId, trackerType, className, ...props }: TrackerProps) =>
 
   return (
     <div className={classNames(className, "tracker")} {...props}>
-      <span>{value}</span>
+      <div>{value}</div>
     </div>
   );
 };

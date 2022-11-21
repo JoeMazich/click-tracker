@@ -5,6 +5,7 @@ button {
   background-color: white;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 button > div {
@@ -35,4 +36,10 @@ button > .sweep {
 
 button:hover > .sweep {
   transform: rotate(-90deg);
+}
+
+@media (max-width: 500px) {
+  button {
+    white-space: initial;
+  }
 }

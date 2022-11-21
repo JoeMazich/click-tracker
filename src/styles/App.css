@@ -10,11 +10,65 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.App {
+.layout {
   height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(black 4%, transparent 0%);
+  background-position: 50% 50%;
+  background-size: 50px 50px;
+
+  padding: 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.layout > div {
+  display: flex;
+  width: 100%;
+  border: black 4px solid;
+  background-color: black;
+  gap: 4px;
+  width: min-content;
+}
+
+.special-button {
+  background-color: red;
+  font-family: "Rubik Glitch";
+}
+
+@media (max-width: 500px) {
+  .layout {
+    background-image: none;
+    padding: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .layout:after {
+    content: "";
+    background: black;
+    height: 16px;
+    width: 100%;
+  }
+
+  .layout > div {
+    display: flex;
+    width: 100%;
+    border: 0px;
+    background-color: white;
+  }
+
+  .layout > div > *:first-child {
+    flex-grow: 1;
+  }
+
+  .layout > div > *:last-child {
+    min-width: 100px;
+  }
 }
 
 @import "./components/button.css";
